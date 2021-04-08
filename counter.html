@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--fonts-->
+<link 
+rel="preconnect" 
+href="https://fonts.gstatic.com">
+<link 
+href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" 
+rel="stylesheet">
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #212529;
+  }
+  body{
+    /*background-color: #c3ff7d;*/
+    background-color: rgb(0,204,255,0.4);
+  }
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 300px;
+    max-width: 700px;
+    font-weight: bold;
+  }
+  .text{
+    text-align: center;
+  }
+  .text h1{
+    color: #0061ff;
+    font-family: 'Tajawal',Arial;
+    transition: 0.5s;
+  }
+  .text h1:after{
+    content: "سبحان الله";
+    animation-name: change-text;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+  }
+  .text p{
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #counter{
+    margin-top: 20px;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background-color: #00ff79;
+    border-radius: 50px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border-left: 5px solid rgb(248,114,114);
+    border-top: 5px solid rgb(248,114,114);
+    border-right: 5px solid rgb(55,96,250);
+    border-bottom: 5px solid rgb(55,96,250);
+  }
+  @keyframes change-text{
+    0%{
+      content: "سبحان الله";
+    }
+    20%{
+      content: "الحمد لله";
+    }
+    40%{
+      content: "لا إله إلا الله";
+    }
+    60%{
+      content: "الله أكبر";
+    }
+    80%{
+      content: "أستغفر الله";
+    }
+    100%{
+      content: "اللهم صل على محمد ❤️";
+    }
+  }
+</style>
+    <title>
+      سبحة المسلم
+    </title>
+    <link rel="shortcut icon" href="https://www.flaticon.com/svg/vstatic/svg/3858/3858880.svg?token=exp=1617884608~hmac=bd68232529a252f93b6291c1c4d5c5d3" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+  <div class="text">
+    <h1></h1>
+    <p>
+      إِنَّ اللَّهَ يَدْنُو مِنْ خَلْقِهِ فَيَغْفِرُ لِمَنِ اسْتَغْفَرَ
+    </p>
+  </div>
+  <button 
+  id="counter">
+    0
+  </button>
+  </div>
+  
+<!--script-->
+<script>
+var button = document.getElementById("counter"),
+count = 0;
+button.onclick = function() {
+count += 1;
+button.innerHTML = count;
+navigator.vibrate([20])
+};
+</script>
+</body>
+</html>
